@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Plot PHASE 1: Correlation Sweep Results
+Plot Synthetic Correlation Sweep Results
 Shows how order sensitivity scales with data correlation level
 """
 import json
@@ -8,10 +8,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def plot_correlation_sweep():
-    """Load PHASE 1 results and create Figure 4: Sensitivity vs Correlation"""
+    """Load correlation sweep results and create figure: Sensitivity vs Correlation"""
     
     # Load results
-    with open('results/PHASE1_correlation_sweep.json', 'r') as f:
+    with open('results/synthetic_correlation_analysis_results.json', 'r') as f:
         results = json.load(f)
     
     # Extract data
@@ -33,7 +33,7 @@ def plot_correlation_sweep():
     ax.grid(True, alpha=0.3, linestyle='--')
     ax.set_xlabel('Hot-Set Fraction (Data Correlation Level)', fontsize=12, fontweight='bold')
     ax.set_ylabel('Order Sensitivity Factor (Grouped/Random Ratio)', fontsize=12, fontweight='bold')
-    ax.set_title('PHASE 1: How Order Sensitivity Scales with Data Correlation\n(Synthetic Data with Parameterized Hot-Set)', 
+    ax.set_title('Synthetic Data Analysis: Order Sensitivity vs Data Correlation\n(Hot-Set Fraction Parameterization)', 
                  fontsize=14, fontweight='bold')
     
     # Add value labels on points
@@ -52,8 +52,8 @@ def plot_correlation_sweep():
     plt.tight_layout()
     
     # Save figure
-    plt.savefig('plots/PHASE1_correlation_sweep.png', dpi=300, bbox_inches='tight')
-    print("✓ Figure saved: plots/PHASE1_correlation_sweep.png")
+    plt.savefig('plots/synthetic_correlation_analysis.png', dpi=300, bbox_inches='tight')
+    print("✓ Figure saved: plots/synthetic_correlation_analysis.png")
     
     # Also create comparison figure with all 4 phases
     create_all_phases_comparison()

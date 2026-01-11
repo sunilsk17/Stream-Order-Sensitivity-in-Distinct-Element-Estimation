@@ -1,5 +1,5 @@
 """
-PHASE 1: Correlation Sweep Analysis
+Synthetic Data Correlation Sweep Analysis
 
 Vary hot-set fraction from 0.2 to 0.95 and measure order sensitivity factor.
 Goal: Show that order sensitivity increases with data correlation.
@@ -154,7 +154,7 @@ def run_correlation_sweep():
     
     # Save results
     os.makedirs('results', exist_ok=True)
-    output_path = 'results/PHASE1_correlation_sweep.json'
+    output_path = 'results/synthetic_correlation_analysis_results.json'
     with open(output_path, 'w') as f:
         json.dump(results, f, indent=2)
     

@@ -27,7 +27,7 @@ This repository contains a rigorous empirical study investigating whether input 
 │   └── *_stream_stats.json                 # Dataset statistics
 │
 ├── experiments/                             # Main research experiments
-│   └── phase2_corrected_real_data.py       # Primary convergence analysis
+│   └── real_data_convergence_analysis.py  # Primary convergence analysis
 │
 ├── sketches/                                # Algorithm implementations
 │   ├── hll.py                              # HyperLogLog implementation (MurmurHash)
@@ -40,12 +40,12 @@ This repository contains a rigorous empirical study investigating whether input 
 │   └── *.png                               # Generated figures
 │
 ├── results/                                 # Experimental results
-│   └── PHASE2_CORRECTED_RESULTS.json       # Complete convergence results
+│   └── real_data_convergence_analysis_results.json  # Complete convergence results
 │
 ### Running Main Experiment
 
 ```bash
-python experiments/phase2_corrected_real_data.py
+python experiments/real_data_convergence_analysis.py
 ```
 
 **What it does:**
@@ -54,7 +54,7 @@ python experiments/phase2_corrected_real_data.py
 3. Measures HyperLogLog convergence at 20 checkpoints per stream
 4. Tracks items needed to reach ≤5% absolute error
 5. Calculates sensitivity: T_grouped / T_random
-6. Saves complete results to `results/PHASE2_CORRECTED_RESULTS.json`
+6. Saves complete results to `results/real_data_convergence_analysis_results.json`
 
 **Expected runtime:** 2-5 minutes
 
@@ -92,11 +92,11 @@ For each experiment (12 total: 3 orderings × 4 datasets):
 
 ### HyperLogLog Implementation
 
-**Location:** `sketches/hll.py` and `experiments/phase2_corrected_real_data.py`
+**Location:** `sketches/hll.py` and `experiments/real_data_convergence_analysis.py`
 
 **Parameters:**
 - Precision parameter: `p = 10` → 1024 registers
-- Hash function: MurmurHash64 (mmh3) in hll.py, SHA1 in phase2_corrected_real_data.py
+- Hash function: MurmurHash64 (mmh3) in hll.py, SHA1 in real_data_convergence_analysis.py
 - Bias correction: Small-range and large-range corrections applied
 
 **How it works:**
@@ -141,10 +141,10 @@ sort data/enron_items_grouped.txt | uniq | wc -l
 
 ```bash
 # 1. Run experiments
-python experiments/phase2_corrected_real_data.py
+python experiments/real_data_convergence_analysis.py
 
 # 2. Check results
-cat results/PHASE2_CORRECTED_RESULTS.json | python -m json.tool | head -100
+cat results/real_data_convergence_analysis_results.json | python -m json.tool | head -100
 
 # 3. Generate visualizations (optional)
 python plots/plot_error.py
@@ -238,8 +238,8 @@ estimate = buffered.count()
 ### Generate different stream orders
 
 **Essential for Verification:**
-1. ✅ `experiments/phase2_corrected_real_data.py` - Main experiment code (255 lines)
-2. ✅ `results/PHASE2_CORRECTED_RESULTS.json` - Complete results with convergence tracking
+1. ✅ `experiments/real_data_convergence_analysis.py` - Main experiment code (255 lines)
+2. ✅ `results/real_data_convergence_analysis_results.json` - Complete results with convergence tracking
 3. ✅ `sketches/hll.py` - HyperLogLog algorithm implementation
 4. ✅ `sketches/fm.py` - Flajolet-Martin algorithm implementation
 5. ✅ `data/*_stream_stats.json` - Dataset statistics with verification
@@ -312,7 +312,7 @@ This correction **strengthened** our research by:
 - **Reproducibility**: See Section "Reproducibility" above
 - **Algorithm details**: Review docstrings in `sketches/hll.py`
 - **Dataset sources**: Check Dataset section above with direct links
-- **Results interpretation**: See `results/PHASE2_CORRECTED_RESULTS.json` and Tables above
+- **Results interpretation**: See `results/real_data_convergence_analysis_results.json` and Tables above
 - **Running experiments**: See "Running Main Experiment" section
 
 ---

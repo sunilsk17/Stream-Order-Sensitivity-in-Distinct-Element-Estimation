@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
-PHASE 2 EXTENDED: CORRECTED WITH REAL DATA ONLY
-Dataset Spectrum Analysis with Proper Public Data
+Public Dataset Cardinality Analysis
 
 Uses ONLY publicly available datasets:
 1. Wikipedia pageviews (public archive logs)
@@ -227,7 +226,7 @@ def main():
         'sensitivity_summary': sensitivity_summary
     }
     
-    with open('results/PHASE2_CORRECTED_RESULTS.json', 'w') as f:
+    with open('results/real_data_convergence_analysis_results.json', 'w') as f:
         json.dump(output, f, indent=2)
     
     print("\n" + "=" * 80)
@@ -247,7 +246,7 @@ def main():
     print("✓ Wikipedia: 90,867 unique pages (9.1% duplicates)")
     print("✓ GitHub: 25,593 unique actors (74.4% duplicates)")
     print("✓ Enron: 2,995 unique senders (97.0% duplicates)")
-    print(f"✓ Results saved to: results/PHASE2_CORRECTED_RESULTS.json")
+    print(f"✓ Results saved to: results/real_data_convergence_analysis_results.json")
     print("\n" + "=" * 80)
 
 if __name__ == '__main__':
