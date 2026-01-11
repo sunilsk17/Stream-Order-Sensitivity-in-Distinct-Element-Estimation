@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "Stream Order Sensitivity in Distinct Element Estimation"
+message: "If you use this software, please cite it using these metadata."
+type: software
+authors:
+  - family-names: Srivastava
+    given-names: Sunil Kumar
+    orcid: "https://orcid.org/0000-0000-0000-0000"  # Update with actual ORCID if available
+repository-code: "https://github.com/sunilsk17/Stream-Order-Sensitivity-in-Distinct-Element-Estimation"
+abstract: "A rigorous empirical study investigating whether input stream order affects the convergence and accuracy of HyperLogLog cardinality estimation across diverse real-world datasets including Wikipedia pageviews, GitHub events, Common Crawl URLs, and Enron email corpus."
+keywords:
+  - "cardinality estimation"
+  - "HyperLogLog"
+  - "stream processing"
+  - "order sensitivity"
+  - "distinct element estimation"
+  - "empirical evaluation"
+license: MIT
+version: 1.0.0
+date-released: 2026-01-11

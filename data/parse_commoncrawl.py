@@ -176,8 +176,8 @@ def main():
     print("✓ REAL DATA EXTRACTION COMPLETE")
     print("="*80)
     print("\nNext steps:")
-    print("1. Run: python experiments/phase2_real_data_convergence.py")
-    print("2. Compare results with synthetic data (phase1)")
+    print("1. Run: python experiments/real_data_convergence_analysis.py")
+    print("2. Compare results with synthetic data via synthetic_correlation_analysis.py")
     print("")
 
 

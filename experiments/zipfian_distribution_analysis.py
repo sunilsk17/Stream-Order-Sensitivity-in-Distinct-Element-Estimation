@@ -1,9 +1,9 @@
 """
-PHASE 4: Zipfian Distribution from Real Data
+Zipfian Distribution Analysis from Real Data
 
 Extract domain distribution from Common Crawl URLs and create
 a Zipfian stream that matches real-world patterns (Zipf's Law).
-This bridges synthetic and real data analysis.
+This supplements the main experiments with realistic distribution analysis.
 """
 
 import sys
@@ -71,7 +71,7 @@ def run_zipfian_analysis():
     """
     
     print("\n" + "="*80)
-    print("PHASE 4: ZIPFIAN DISTRIBUTION ANALYSIS (Real Data Pattern)")
+    print("ZIPFIAN DISTRIBUTION ANALYSIS: Real Data Pattern")
     print("="*80 + "\n")
     
     # Load real URLs
@@ -178,7 +178,7 @@ def run_zipfian_analysis():
     
     # Save results
     os.makedirs('results', exist_ok=True)
-    output_path = 'results/PHASE4_zipfian_analysis.json'
+    output_path = 'results/zipfian_distribution_analysis_results.json'
     with open(output_path, 'w') as f:
         json.dump(results, f, indent=2)
     
