@@ -1,0 +1,65 @@
+{
+  "total_emails": 517399,
+  "unique_senders": 20312,
+  "unique_ratio": 0.03925790347488109,
+  "duplicate_ratio": 0.9607420965251189,
+  "total_duplicates": 497087,
+  "burst_patterns": {
+    "total_bursts": 125409,
+    "avg_burst_length": 3.257214394501192,
+    "max_burst_length": 436,
+    "min_burst_length": 2
+  },
+  "top_10_senders": [
+    {
+      "email": "kay.mann@enron.com",
+      "count": 16735
+    },
+    {
+      "email": "vince.kaminski@enron.com",
+      "count": 14368
+    },
+    {
+      "email": "jeff.dasovich@enron.com",
+      "count": 11411
+    },
+    {
+      "email": "pete.davis@enron.com",
+      "count": 9149
+    },
+    {
+      "email": "chris.germany@enron.com",
+      "count": 8801
+    },
+    {
+      "email": "sara.shackleton@enron.com",
+      "count": 8777
+    },
+    {
+      "email": "enron.announcements@enron.com",
+      "count": 8587
+    },
+    {
+      "email": "tana.jones@enron.com",
+      "count": 8490
+    },
+    {
+      "email": "steven.kean@enron.com",
+      "count": 6759
+    },
+    {
+      "email": "kate.symes@enron.com",
+      "count": 5438
+    }
+  ],
+  "timestamp_range": {
+    "earliest": "1979-12-31T16:00:00-08:00",
+    "latest": "2044-01-04T14:48:58-08:00"
+  },
+  "characteristics": {
+    "has_duplicates": true,
+    "has_bursts": true,
+    "realistic": true,
+    "sorted_chronologically": true
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Order Sensitivity on Real Data (Common Crawl URLs)",
+  "data_source": "REAL (Common Crawl)",
+  "stream_size": 64237,
+  "unique_cardinality": 64237,
+  "orders_tested": {
+    "grouped": {
+      "time_to_5_percent": 62000,
+      "time_pct_of_stream": 96.51758332425237,
+      "early_25_percent_error": 0.7477485798409106,
+      "error_stability": 0.28704988083267263,
+      "final_error": 0.009653614191860338
+    },
+    "random": {
+      "time_to_5_percent": 61000,
+      "time_pct_of_stream": 94.96084810934508,
+      "early_25_percent_error": 0.7411316747452258,
+      "error_stability": 0.29809714780193003,
+      "final_error": 0.009653614191860338
+    },
+    "original": {
+      "time_to_5_percent": 62000,
+      "time_pct_of_stream": 96.51758332425237,
+      "early_25_percent_error": 0.7328868266243,
+      "error_stability": 0.29097735224855686,
+      "final_error": 0.009653614191860338
+    }
+  },
+  "order_sensitivity_factor": 0.9838709677419355
+}

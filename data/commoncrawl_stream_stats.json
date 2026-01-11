@@ -1,0 +1,9 @@
+{
+  "dataset": "Common Crawl (Real Public Data)",
+  "total_items": 64237,
+  "unique_items": 64237,
+  "duplicate_ratio": 0.0,
+  "bursts": 0,
+  "source": "WARC files from Common Crawl (https://commoncrawl.org/)",
+  "data_type": "Public web URLs - 100% unique, no synthetic elements"
+}

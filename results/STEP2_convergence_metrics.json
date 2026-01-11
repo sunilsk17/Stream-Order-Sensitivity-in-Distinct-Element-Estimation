@@ -1,0 +1,59 @@
+{
+  "title": "Convergence Behavior in Distinct Element Sketches",
+  "dataset": {
+    "stream_size": 100000,
+    "actual_cardinality": 16704,
+    "distribution": "Correlated (80/20 hot-set/long-tail)"
+  },
+  "metrics": {},
+  "metric1_time_to_accuracy": {
+    "original": {
+      "position": 97000.0,
+      "fraction_of_stream": 0.97,
+      "items_remaining": 3000.0
+    },
+    "random": {
+      "position": 94000.0,
+      "fraction_of_stream": 0.94,
+      "items_remaining": 6000.0
+    },
+    "grouped": {
+      "position": 20000.0,
+      "fraction_of_stream": 0.2,
+      "items_remaining": 80000.0
+    }
+  },
+  "metric2_early_stage_error": {
+    "original": {
+      "error_at_10_percent": 0.8548889738463376,
+      "error_at_25_percent": 0.6983973927043811,
+      "error_at_50_percent": 0.4392277893701649,
+      "final_error": 0.004153996140522086
+    },
+    "random": {
+      "error_at_10_percent": 0.8700819953883809,
+      "error_at_25_percent": 0.6968269288037724,
+      "error_at_50_percent": 0.43400821003625895,
+      "final_error": 0.004153996140522086
+    },
+    "grouped": {
+      "error_at_10_percent": 0.45918120780133465,
+      "error_at_25_percent": 0.011634220221281475,
+      "error_at_50_percent": 0.005180686985348639,
+      "final_error": 0.004153996140522086
+    }
+  },
+  "metric3_stability": {
+    "original": 0.28326570670760476,
+    "random": 0.2884735433321063,
+    "grouped": 0.2282652298953026
+  },
+  "metric4_order_sensitivity_factor": {
+    "random_vs_grouped": 4.7,
+    "interpretation": "Grouped order converges 4.7x faster than random"
+  },
+  "metric5_convergence_delay": {
+    "extra_items_original": 77000.0,
+    "extra_items_percentage": 79.38144329896907
+  }
+}

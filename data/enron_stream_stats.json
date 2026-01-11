@@ -1,0 +1,9 @@
+{
+  "dataset": "Enron Email Corpus (Real Public Data)",
+  "total_items": 100000,
+  "unique_items": 2995,
+  "duplicate_ratio": 97.0,
+  "bursts": 68923,
+  "source": "PACER - Public Enron Email Corpus",
+  "data_type": "Public email addresses from Enron investigation"
+}

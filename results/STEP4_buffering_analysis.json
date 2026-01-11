@@ -1,0 +1,28 @@
+{
+  "baseline": {
+    "buffer_size": 0,
+    "time_to_5_percent": 94000,
+    "early_25_percent_error": 0.692864172841536,
+    "early_50_percent_error": 0.45792280796197965,
+    "final_error": 0.004153996140522086,
+    "error_stability": 0.28882968101434936
+  },
+  "buffer_250": {
+    "buffer_size": 250,
+    "time_to_5_percent": 94000.0,
+    "improvement_percent": 0.0,
+    "early_25_percent_error": 0.692864172841536,
+    "early_50_percent_error": 0.45792280796197965,
+    "final_error": 0.004153996140522086,
+    "error_stability": 0.28882968101434936
+  },
+  "buffer_500": {
+    "buffer_size": 500,
+    "time_to_5_percent": 94000.0,
+    "improvement_percent": 0.0,
+    "early_25_percent_error": 0.692864172841536,
+    "early_50_percent_error": 0.45792280796197965,
+    "final_error": 0.004153996140522086,
+    "error_stability": 0.28882968101434936
+  }
+}

@@ -1,0 +1,61 @@
+Enron Email Parser Execution Log
+Started: 2026-01-10T15:22:58.985158
+============================================================
+
+🔄 Starting Enron Email Parser...
+   Maildir path: /Users/sunilkumars/Desktop/distinct-order-study/maildir
+
+   Processed 20 users, 90062 emails extracted...
+   Processed 40 users, 145311 emails extracted...
+   Processed 60 users, 221760 emails extracted...
+   Processed 80 users, 325748 emails extracted...
+   Processed 100 users, 375433 emails extracted...
+   Processed 120 users, 432045 emails extracted...
+   Processed 140 users, 496351 emails extracted...
+
+✓ Parsing complete:
+   Total users scanned: 150
+   Total emails parsed: 517399
+   Parse errors: 0
+
+🔄 Sorting 517399 emails by timestamp...
+✓ Sorted successfully
+
+📊 Analyzing stream statistics...
+   Total emails: 517,399
+   Unique senders: 20,312
+   Unique ratio: 3.93%
+   Duplicate ratio: 96.07%
+   Total duplicates: 497,087
+
+   Burst patterns:
+      Total bursts: 125409
+      Avg burst length: 3.26
+      Max burst length: 436
+
+   Top 10 senders:
+      1. kay.mann@enron.com: 16735 emails
+      2. vince.kaminski@enron.com: 14368 emails
+      3. jeff.dasovich@enron.com: 11411 emails
+      4. pete.davis@enron.com: 9149 emails
+      5. chris.germany@enron.com: 8801 emails
+      6. sara.shackleton@enron.com: 8777 emails
+      7. enron.announcements@enron.com: 8587 emails
+      8. tana.jones@enron.com: 8490 emails
+      9. steven.kean@enron.com: 6759 emails
+      10. kate.symes@enron.com: 5438 emails
+
+   Time range: 1979-12-31T16:00:00-08:00 to 2044-01-04T14:48:58-08:00
+
+💾 Writing stream to /Users/sunilkumars/Desktop/distinct-order-study/data/enron_email_stream.json.gz...
+✓ Stream written successfully
+   File size: 2.66 MB
+
+✓ Statistics saved to /Users/sunilkumars/Desktop/distinct-order-study/data/enron_email_stream_stats.json
+
+✅ ENRON PARSING COMPLETE!
+
+📁 Output files:
+   Stream: /Users/sunilkumars/Desktop/distinct-order-study/data/enron_email_stream.json.gz
+   Stats: /Users/sunilkumars/Desktop/distinct-order-study/data/enron_email_stream_stats.json
+   Log: /Users/sunilkumars/Desktop/distinct-order-study/results/ENRON_PARSER_LOG.txt

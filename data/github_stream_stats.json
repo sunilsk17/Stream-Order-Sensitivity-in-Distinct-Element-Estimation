@@ -1,0 +1,51 @@
+{
+  "total_items": 100000,
+  "unique_items": 25593,
+  "duplicate_ratio": 0.7441,
+  "duplicate_count": 74407,
+  "burst_patterns": 8638,
+  "top_10_items": [
+    [
+      "github-actions[bot]",
+      25616
+    ],
+    [
+      "dependabot[bot]",
+      2536
+    ],
+    [
+      "renovate[bot]",
+      937
+    ],
+    [
+      "swa-runner-app[bot]",
+      913
+    ],
+    [
+      "frdpzk2",
+      910
+    ],
+    [
+      "SoliSpirit",
+      821
+    ],
+    [
+      "pull[bot]",
+      818
+    ],
+    [
+      "Alexey-Gorulev-kernelics",
+      635
+    ],
+    [
+      "CelestiaNFT",
+      545
+    ],
+    [
+      "chrisxero",
+      489
+    ]
+  ],
+  "max_count": 25616,
+  "gini_coefficient": 0.6757621646543976
+}

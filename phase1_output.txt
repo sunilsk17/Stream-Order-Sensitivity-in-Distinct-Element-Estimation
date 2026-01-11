@@ -1,0 +1,17 @@
+
+================================================================================
+PHASE 1: CORRELATION SWEEP ANALYSIS
+================================================================================
+
+Hot Fraction    Grouped         Random          Sensitivity     Unique Items   
+--------------------------------------------------------------------------------
+0.20            80000           99000           1.24           × 40077          
+0.35            65000           95000           1.46           × 36601          
+0.50            50000           100000          2.00           × 31822          
+Traceback (most recent call last):
+  File "/Users/sunilkumars/Desktop/distinct-order-study/experiments/phase1_correlation_sweep.py", line 164, in <module>
+    results = run_correlation_sweep()
+  File "/Users/sunilkumars/Desktop/distinct-order-study/experiments/phase1_correlation_sweep.py", line 97, in run_correlation_sweep
+    if grouped_time > 0:
+       ^^^^^^^^^^^^^^^^
+TypeError: '>' not supported between instances of 'NoneType' and 'int'

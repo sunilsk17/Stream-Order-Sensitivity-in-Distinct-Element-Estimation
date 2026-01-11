@@ -1,0 +1,60 @@
+{
+  "title": "Order Sensitivity vs Data Correlation",
+  "stream_size": 100000,
+  "analysis": [
+    {
+      "hot_fraction": 0.2,
+      "grouped_time_to_5_percent": 80000,
+      "random_time_to_5_percent": 99000,
+      "sensitivity_factor": 1.2375,
+      "unique_items": 40077,
+      "grouped_early_25_error": 0.6938391271706943,
+      "random_early_25_error": 0.587878861842505
+    },
+    {
+      "hot_fraction": 0.35,
+      "grouped_time_to_5_percent": 65000,
+      "random_time_to_5_percent": 95000,
+      "sensitivity_factor": 1.4615384615384615,
+      "unique_items": 36601,
+      "grouped_early_25_error": 0.6251591963297352,
+      "random_early_25_error": 0.6420528498160192
+    },
+    {
+      "hot_fraction": 0.5,
+      "grouped_time_to_5_percent": 50000,
+      "random_time_to_5_percent": 100000,
+      "sensitivity_factor": 2.0,
+      "unique_items": 31822,
+      "grouped_early_25_error": 0.5111000841943412,
+      "random_early_25_error": 0.6364573360248656
+    },
+    {
+      "hot_fraction": 0.65,
+      "grouped_time_to_5_percent": 100000,
+      "random_time_to_5_percent": 100000,
+      "sensitivity_factor": 1.0,
+      "unique_items": 25296,
+      "grouped_early_25_error": 0.3158279814986487,
+      "random_early_25_error": 0.6714325526398148
+    },
+    {
+      "hot_fraction": 0.8,
+      "grouped_time_to_5_percent": 20000,
+      "random_time_to_5_percent": 97000,
+      "sensitivity_factor": 4.85,
+      "unique_items": 16551,
+      "grouped_early_25_error": 0.027522305904216927,
+      "random_early_25_error": 0.7022040852414722
+    },
+    {
+      "hot_fraction": 0.95,
+      "grouped_time_to_5_percent": 100000,
+      "random_time_to_5_percent": 100000,
+      "sensitivity_factor": 1.0,
+      "unique_items": 4845,
+      "grouped_early_25_error": 0.07142904219202018,
+      "random_early_25_error": 0.7213655422100195
+    }
+  ]
+}

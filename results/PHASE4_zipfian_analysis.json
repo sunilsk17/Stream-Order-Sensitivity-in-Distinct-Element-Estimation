@@ -1,0 +1,21 @@
+{
+  "title": "Order Sensitivity on Zipfian-Distributed Real Data",
+  "data_source": "Common Crawl Domains (Zipfian)",
+  "stream_size": 100000,
+  "unique_cardinality": 544,
+  "domain_count": 52031,
+  "zipf_exponent": 1.0,
+  "orders_tested": {
+    "grouped": {
+      "time_to_5_percent": 100000,
+      "early_25_percent_error": 0.7591217920167244,
+      "stability": 0.24810835773810394
+    },
+    "random": {
+      "time_to_5_percent": 89000,
+      "early_25_percent_error": 0.4706959868008824,
+      "stability": 0.2358894238717271
+    }
+  },
+  "order_sensitivity_factor": 0.89
+}
