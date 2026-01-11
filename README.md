@@ -167,9 +167,9 @@ numpy==1.24.3
 All datasets are publicly available and independently verifiable:
 
 - **Common Crawl**: https://commoncrawl.org/ (CC0 Public Domain)
-- **Wikipedia**: https://dumps.wikimedia.org/ (CC-BY-SA 3.0)
-- **GitHub**: https://www.gharchive.org/ (CC0 Public Domain)
-- **Enron**: https://www.cs.cmu.edu/~enron/ (Public Domain)
+- **Wikipedia Pageviews**: https://dumps.wikimedia.org/other/pageviews/ (CC-BY-SA 3.0)
+- **GitHub Event Archive**: https://data.gharchive.org/ (CC0 Public Domain)
+- **Enron Email Corpus**: https://www.cs.cmu.edu/~enron/ (Public Domain)
 
 ### Code Quality
 
@@ -207,7 +207,7 @@ Order sensitivity in HyperLogLog is **NOT a universal phenomenon**. It is **data
 
 ---
 
-## Files for Journal Review
+## Essential Files for Reproducibility
 | `experiments/buffering.py` | Compare standard vs. buffered sketches with varying buffer sizes |
 | `plots/plot_error.py` | Generate publication-quality plots |
 
@@ -274,7 +274,6 @@ This code and research are provided for academic and research purposes.
          A Data-Dependent Phenomenon},
   author={Sunil Kumar S},
   year={2026},
-  journal={Under Review},
   url={https://github.com/sunilsk17/Stream-Order-Sensitivity-in-Distinct-Element-Estimation}
 }
 ```
@@ -320,15 +319,14 @@ This correction **strengthened** our research by:
 
 ## Version History
 
-- **v1.0** (January 2026): Initial publication-ready release
-  - ✅ 4 real-world datasets
+- **v1.0** (January 2026): Initial release
+  - ✅ 4 real public datasets
   - ✅ 12 convergence experiments
   - ✅ Complete reproducibility documentation
-  - ✅ Publication-grade code quality
+  - ✅ Production-grade code quality
   - ✅ Verified with independent data verification
 
 ---
 
 **Last Updated:** January 11, 2026  
-**Repository:** https://github.com/sunilsk17/Stream-Order-Sensitivity-in-Distinct-Element-Estimation  
-**Status:** ✅ Ready for journal review and publication
+**Repository:** https://github.com/sunilsk17/Stream-Order-Sensitivity-in-Distinct-Element-Estimation
