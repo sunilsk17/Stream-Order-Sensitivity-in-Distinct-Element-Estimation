@@ -1,0 +1,1662 @@
+{
+  "timestamp": "2026-01-17T16:49:09.539019",
+  "algorithm": "KMV (K-Minimum Values)",
+  "sketch_parameter_k": 512,
+  "note": "All datasets are REAL PUBLIC DATA - NO synthetic elements. Parallel analysis with HLL for comparison.",
+  "datasets_info": {
+    "Wikipedia": {
+      "total": 100000,
+      "unique": 90867,
+      "duplicate_ratio": 9.1,
+      "source": "Public archive"
+    },
+    "GitHub": {
+      "total": 100000,
+      "unique": 25593,
+      "duplicate_ratio": 74.4,
+      "source": "Public archive"
+    },
+    "Common Crawl": {
+      "total": 64237,
+      "unique": 64237,
+      "duplicate_ratio": 0.0,
+      "source": "Common Crawl (https://commoncrawl.org/)"
+    },
+    "Enron": {
+      "total": 100000,
+      "unique": 2995,
+      "duplicate_ratio": 97.0,
+      "source": "Public archive"
+    }
+  },
+  "experiments": [
+    {
+      "dataset": "Wikipedia",
+      "ordering": "grouped",
+      "items_total": 100000,
+      "unique_true": 90867,
+      "unique_pct": 90.9,
+      "time_to_5pct_error": 90000,
+      "final_error": 12.85,
+      "convergence": [
+        {
+          "items": 5000,
+          "pct": 5.0,
+          "estimate": 5633,
+          "error": 93.8
+        },
+        {
+          "items": 10000,
+          "pct": 10.0,
+          "estimate": 10600,
+          "error": 88.33
+        },
+        {
+          "items": 15000,
+          "pct": 15.0,
+          "estimate": 15051,
+          "error": 83.44
+        },
+        {
+          "items": 20000,
+          "pct": 20.0,
+          "estimate": 19686,
+          "error": 78.34
+        },
+        {
+          "items": 25000,
+          "pct": 25.0,
+          "estimate": 23363,
+          "error": 74.29
+        },
+        {
+          "items": 30000,
+          "pct": 30.0,
+          "estimate": 27170,
+          "error": 70.1
+        },
+        {
+          "items": 35000,
+          "pct": 35.0,
+          "estimate": 32062,
+          "error": 64.72
+        },
+        {
+          "items": 40000,
+          "pct": 40.0,
+          "estimate": 36192,
+          "error": 60.17
+        },
+        {
+          "items": 45000,
+          "pct": 45.0,
+          "estimate": 41980,
+          "error": 53.8
+        },
+        {
+          "items": 50000,
+          "pct": 50.0,
+          "estimate": 46573,
+          "error": 48.75
+        },
+        {
+          "items": 55000,
+          "pct": 55.0,
+          "estimate": 52886,
+          "error": 41.8
+        },
+        {
+          "items": 60000,
+          "pct": 60.0,
+          "estimate": 60009,
+          "error": 33.96
+        },
+        {
+          "items": 65000,
+          "pct": 65.0,
+          "estimate": 66505,
+          "error": 26.81
+        },
+        {
+          "items": 70000,
+          "pct": 70.0,
+          "estimate": 71726,
+          "error": 21.06
+        },
+        {
+          "items": 75000,
+          "pct": 75.0,
+          "estimate": 76860,
+          "error": 15.41
+        },
+        {
+          "items": 80000,
+          "pct": 80.0,
+          "estimate": 80836,
+          "error": 11.04
+        },
+        {
+          "items": 85000,
+          "pct": 85.0,
+          "estimate": 86161,
+          "error": 5.18
+        },
+        {
+          "items": 90000,
+          "pct": 90.0,
+          "estimate": 92984,
+          "error": 2.33
+        },
+        {
+          "items": 95000,
+          "pct": 95.0,
+          "estimate": 96904,
+          "error": 6.64
+        },
+        {
+          "items": 100000,
+          "pct": 100.0,
+          "estimate": 102545,
+          "error": 12.85
+        }
+      ],
+      "sketch_parameter_k": 512
+    },
+    {
+      "dataset": "Wikipedia",
+      "ordering": "random",
+      "items_total": 100000,
+      "unique_true": 90867,
+      "unique_pct": 90.9,
+      "time_to_5pct_error": 85000,
+      "final_error": 12.85,
+      "convergence": [
+        {
+          "items": 5000,
+          "pct": 5.0,
+          "estimate": 4732,
+          "error": 94.79
+        },
+        {
+          "items": 10000,
+          "pct": 10.0,
+          "estimate": 9988,
+          "error": 89.01
+        },
+        {
+          "items": 15000,
+          "pct": 15.0,
+          "estimate": 14922,
+          "error": 83.58
+        },
+        {
+          "items": 20000,
+          "pct": 20.0,
+          "estimate": 19443,
+          "error": 78.6
+        },
+        {
+          "items": 25000,
+          "pct": 25.0,
+          "estimate": 25161,
+          "error": 72.31
+        },
+        {
+          "items": 30000,
+          "pct": 30.0,
+          "estimate": 31395,
+          "error": 65.45
+        },
+        {
+          "items": 35000,
+          "pct": 35.0,
+          "estimate": 35164,
+          "error": 61.3
+        },
+        {
+          "items": 40000,
+          "pct": 40.0,
+          "estimate": 40773,
+          "error": 55.13
+        },
+        {
+          "items": 45000,
+          "pct": 45.0,
+          "estimate": 47057,
+          "error": 48.21
+        },
+        {
+          "items": 50000,
+          "pct": 50.0,
+          "estimate": 52098,
+          "error": 42.67
+        },
+        {
+          "items": 55000,
+          "pct": 55.0,
+          "estimate": 55291,
+          "error": 39.15
+        },
+        {
+          "items": 60000,
+          "pct": 60.0,
+          "estimate": 60167,
+          "error": 33.79
+        },
+        {
+          "items": 65000,
+          "pct": 65.0,
+          "estimate": 66316,
+          "error": 27.02
+        },
+        {
+          "items": 70000,
+          "pct": 70.0,
+          "estimate": 71612,
+          "error": 21.19
+        },
+        {
+          "items": 75000,
+          "pct": 75.0,
+          "estimate": 77651,
+          "error": 14.54
+        },
+        {
+          "items": 80000,
+          "pct": 80.0,
+          "estimate": 82404,
+          "error": 9.31
+        },
+        {
+          "items": 85000,
+          "pct": 85.0,
+          "estimate": 88027,
+          "error": 3.13
+        },
+        {
+          "items": 90000,
+          "pct": 90.0,
+          "estimate": 94589,
+          "error": 4.1
+        },
+        {
+          "items": 95000,
+          "pct": 95.0,
+          "estimate": 98804,
+          "error": 8.73
+        },
+        {
+          "items": 100000,
+          "pct": 100.0,
+          "estimate": 102545,
+          "error": 12.85
+        }
+      ],
+      "sketch_parameter_k": 512
+    },
+    {
+      "dataset": "Wikipedia",
+      "ordering": "chrono",
+      "items_total": 100000,
+      "unique_true": 90867,
+      "unique_pct": 90.9,
+      "time_to_5pct_error": 85000,
+      "final_error": 12.85,
+      "convergence": [
+        {
+          "items": 5000,
+          "pct": 5.0,
+          "estimate": 4814,
+          "error": 94.7
+        },
+        {
+          "items": 10000,
+          "pct": 10.0,
+          "estimate": 9690,
+          "error": 89.34
+        },
+        {
+          "items": 15000,
+          "pct": 15.0,
+          "estimate": 14352,
+          "error": 84.21
+        },
+        {
+          "items": 20000,
+          "pct": 20.0,
+          "estimate": 19490,
+          "error": 78.55
+        },
+        {
+          "items": 25000,
+          "pct": 25.0,
+          "estimate": 24675,
+          "error": 72.84
+        },
+        {
+          "items": 30000,
+          "pct": 30.0,
+          "estimate": 28225,
+          "error": 68.94
+        },
+        {
+          "items": 35000,
+          "pct": 35.0,
+          "estimate": 33287,
+          "error": 63.37
+        },
+        {
+          "items": 40000,
+          "pct": 40.0,
+          "estimate": 37666,
+          "error": 58.55
+        },
+        {
+          "items": 45000,
+          "pct": 45.0,
+          "estimate": 43695,
+          "error": 51.91
+        },
+        {
+          "items": 50000,
+          "pct": 50.0,
+          "estimate": 48374,
+          "error": 46.76
+        },
+        {
+          "items": 55000,
+          "pct": 55.0,
+          "estimate": 52642,
+          "error": 42.07
+        },
+        {
+          "items": 60000,
+          "pct": 60.0,
+          "estimate": 59931,
+          "error": 34.04
+        },
+        {
+          "items": 65000,
+          "pct": 65.0,
+          "estimate": 65202,
+          "error": 28.24
+        },
+        {
+          "items": 70000,
+          "pct": 70.0,
+          "estimate": 70356,
+          "error": 22.57
+        },
+        {
+          "items": 75000,
+          "pct": 75.0,
+          "estimate": 76632,
+          "error": 15.67
+        },
+        {
+          "items": 80000,
+          "pct": 80.0,
+          "estimate": 83672,
+          "error": 7.92
+        },
+        {
+          "items": 85000,
+          "pct": 85.0,
+          "estimate": 88938,
+          "error": 2.12
+        },
+        {
+          "items": 90000,
+          "pct": 90.0,
+          "estimate": 94589,
+          "error": 4.1
+        },
+        {
+          "items": 95000,
+          "pct": 95.0,
+          "estimate": 98782,
+          "error": 8.71
+        },
+        {
+          "items": 100000,
+          "pct": 100.0,
+          "estimate": 102545,
+          "error": 12.85
+        }
+      ],
+      "sketch_parameter_k": 512
+    },
+    {
+      "dataset": "GitHub",
+      "ordering": "grouped",
+      "items_total": 100000,
+      "unique_true": 25593,
+      "unique_pct": 25.6,
+      "time_to_5pct_error": 30000,
+      "final_error": 93.88,
+      "convergence": [
+        {
+          "items": 5000,
+          "pct": 5.0,
+          "estimate": 4134,
+          "error": 83.85
+        },
+        {
+          "items": 10000,
+          "pct": 10.0,
+          "estimate": 7570,
+          "error": 70.42
+        },
+        {
+          "items": 15000,
+          "pct": 15.0,
+          "estimate": 12748,
+          "error": 50.19
+        },
+        {
+          "items": 20000,
+          "pct": 20.0,
+          "estimate": 16313,
+          "error": 36.26
+        },
+        {
+          "items": 25000,
+          "pct": 25.0,
+          "estimate": 22184,
+          "error": 13.32
+        },
+        {
+          "items": 30000,
+          "pct": 30.0,
+          "estimate": 26662,
+          "error": 4.18
+        },
+        {
+          "items": 35000,
+          "pct": 35.0,
+          "estimate": 29637,
+          "error": 15.8
+        },
+        {
+          "items": 40000,
+          "pct": 40.0,
+          "estimate": 30856,
+          "error": 20.56
+        },
+        {
+          "items": 45000,
+          "pct": 45.0,
+          "estimate": 32168,
+          "error": 25.69
+        },
+        {
+          "items": 50000,
+          "pct": 50.0,
+          "estimate": 32168,
+          "error": 25.69
+        },
+        {
+          "items": 55000,
+          "pct": 55.0,
+          "estimate": 32168,
+          "error": 25.69
+        },
+        {
+          "items": 60000,
+          "pct": 60.0,
+          "estimate": 32168,
+          "error": 25.69
+        },
+        {
+          "items": 65000,
+          "pct": 65.0,
+          "estimate": 32168,
+          "error": 25.69
+        },
+        {
+          "items": 70000,
+          "pct": 70.0,
+          "estimate": 32251,
+          "error": 26.01
+        },
+        {
+          "items": 75000,
+          "pct": 75.0,
+          "estimate": 35034,
+          "error": 36.89
+        },
+        {
+          "items": 80000,
+          "pct": 80.0,
+          "estimate": 39709,
+          "error": 55.15
+        },
+        {
+          "items": 85000,
+          "pct": 85.0,
+          "estimate": 42494,
+          "error": 66.04
+        },
+        {
+          "items": 90000,
+          "pct": 90.0,
+          "estimate": 43786,
+          "error": 71.09
+        },
+        {
+          "items": 95000,
+          "pct": 95.0,
+          "estimate": 44769,
+          "error": 74.93
+        },
+        {
+          "items": 100000,
+          "pct": 100.0,
+          "estimate": 49619,
+          "error": 93.88
+        }
+      ],
+      "sketch_parameter_k": 512
+    },
+    {
+      "dataset": "GitHub",
+      "ordering": "random",
+      "items_total": 100000,
+      "unique_true": 25593,
+      "unique_pct": 25.6,
+      "time_to_5pct_error": 45000,
+      "final_error": 93.88,
+      "convergence": [
+        {
+          "items": 5000,
+          "pct": 5.0,
+          "estimate": 3714,
+          "error": 85.49
+        },
+        {
+          "items": 10000,
+          "pct": 10.0,
+          "estimate": 6215,
+          "error": 75.71
+        },
+        {
+          "items": 15000,
+          "pct": 15.0,
+          "estimate": 8845,
+          "error": 65.44
+        },
+        {
+          "items": 20000,
+          "pct": 20.0,
+          "estimate": 12677,
+          "error": 50.47
+        },
+        {
+          "items": 25000,
+          "pct": 25.0,
+          "estimate": 16113,
+          "error": 37.04
+        },
+        {
+          "items": 30000,
+          "pct": 30.0,
+          "estimate": 18307,
+          "error": 28.47
+        },
+        {
+          "items": 35000,
+          "pct": 35.0,
+          "estimate": 18925,
+          "error": 26.05
+        },
+        {
+          "items": 40000,
+          "pct": 40.0,
+          "estimate": 21397,
+          "error": 16.4
+        },
+        {
+          "items": 45000,
+          "pct": 45.0,
+          "estimate": 24666,
+          "error": 3.62
+        },
+        {
+          "items": 50000,
+          "pct": 50.0,
+          "estimate": 27391,
+          "error": 7.03
+        },
+        {
+          "items": 55000,
+          "pct": 55.0,
+          "estimate": 29447,
+          "error": 15.06
+        },
+        {
+          "items": 60000,
+          "pct": 60.0,
+          "estimate": 32340,
+          "error": 26.36
+        },
+        {
+          "items": 65000,
+          "pct": 65.0,
+          "estimate": 34737,
+          "error": 35.73
+        },
+        {
+          "items": 70000,
+          "pct": 70.0,
+          "estimate": 35501,
+          "error": 38.71
+        },
+        {
+          "items": 75000,
+          "pct": 75.0,
+          "estimate": 39539,
+          "error": 54.49
+        },
+        {
+          "items": 80000,
+          "pct": 80.0,
+          "estimate": 42474,
+          "error": 65.96
+        },
+        {
+          "items": 85000,
+          "pct": 85.0,
+          "estimate": 43786,
+          "error": 71.09
+        },
+        {
+          "items": 90000,
+          "pct": 90.0,
+          "estimate": 45402,
+          "error": 77.4
+        },
+        {
+          "items": 95000,
+          "pct": 95.0,
+          "estimate": 47076,
+          "error": 83.94
+        },
+        {
+          "items": 100000,
+          "pct": 100.0,
+          "estimate": 49619,
+          "error": 93.88
+        }
+      ],
+      "sketch_parameter_k": 512
+    },
+    {
+      "dataset": "GitHub",
+      "ordering": "chrono",
+      "items_total": 100000,
+      "unique_true": 25593,
+      "unique_pct": 25.6,
+      "time_to_5pct_error": 45000,
+      "final_error": 93.88,
+      "convergence": [
+        {
+          "items": 5000,
+          "pct": 5.0,
+          "estimate": 4048,
+          "error": 84.18
+        },
+        {
+          "items": 10000,
+          "pct": 10.0,
+          "estimate": 8970,
+          "error": 64.95
+        },
+        {
+          "items": 15000,
+          "pct": 15.0,
+          "estimate": 15719,
+          "error": 38.58
+        },
+        {
+          "items": 20000,
+          "pct": 20.0,
+          "estimate": 18307,
+          "error": 28.47
+        },
+        {
+          "items": 25000,
+          "pct": 25.0,
+          "estimate": 18307,
+          "error": 28.47
+        },
+        {
+          "items": 30000,
+          "pct": 30.0,
+          "estimate": 18700,
+          "error": 26.93
+        },
+        {
+          "items": 35000,
+          "pct": 35.0,
+          "estimate": 20328,
+          "error": 20.57
+        },
+        {
+          "items": 40000,
+          "pct": 40.0,
+          "estimate": 23401,
+          "error": 8.57
+        },
+        {
+          "items": 45000,
+          "pct": 45.0,
+          "estimate": 25436,
+          "error": 0.61
+        },
+        {
+          "items": 50000,
+          "pct": 50.0,
+          "estimate": 27821,
+          "error": 8.71
+        },
+        {
+          "items": 55000,
+          "pct": 55.0,
+          "estimate": 29077,
+          "error": 13.61
+        },
+        {
+          "items": 60000,
+          "pct": 60.0,
+          "estimate": 32464,
+          "error": 26.85
+        },
+        {
+          "items": 65000,
+          "pct": 65.0,
+          "estimate": 34428,
+          "error": 34.52
+        },
+        {
+          "items": 70000,
+          "pct": 70.0,
+          "estimate": 35402,
+          "error": 38.33
+        },
+        {
+          "items": 75000,
+          "pct": 75.0,
+          "estimate": 39709,
+          "error": 55.15
+        },
+        {
+          "items": 80000,
+          "pct": 80.0,
+          "estimate": 42494,
+          "error": 66.04
+        },
+        {
+          "items": 85000,
+          "pct": 85.0,
+          "estimate": 43786,
+          "error": 71.09
+        },
+        {
+          "items": 90000,
+          "pct": 90.0,
+          "estimate": 45114,
+          "error": 76.28
+        },
+        {
+          "items": 95000,
+          "pct": 95.0,
+          "estimate": 46363,
+          "error": 81.16
+        },
+        {
+          "items": 100000,
+          "pct": 100.0,
+          "estimate": 49619,
+          "error": 93.88
+        }
+      ],
+      "sketch_parameter_k": 512
+    },
+    {
+      "dataset": "Common Crawl",
+      "ordering": "grouped",
+      "items_total": 64237,
+      "unique_true": 64237,
+      "unique_pct": 100.0,
+      "time_to_5pct_error": 64220,
+      "final_error": 1.89,
+      "convergence": [
+        {
+          "items": 3211,
+          "pct": 5.0,
+          "estimate": 3167,
+          "error": 95.07
+        },
+        {
+          "items": 6422,
+          "pct": 10.0,
+          "estimate": 6477,
+          "error": 89.92
+        },
+        {
+          "items": 9633,
+          "pct": 15.0,
+          "estimate": 9828,
+          "error": 84.7
+        },
+        {
+          "items": 12844,
+          "pct": 20.0,
+          "estimate": 13220,
+          "error": 79.42
+        },
+        {
+          "items": 16055,
+          "pct": 25.0,
+          "estimate": 16710,
+          "error": 73.99
+        },
+        {
+          "items": 19266,
+          "pct": 30.0,
+          "estimate": 19922,
+          "error": 68.99
+        },
+        {
+          "items": 22477,
+          "pct": 35.0,
+          "estimate": 22803,
+          "error": 64.5
+        },
+        {
+          "items": 25688,
+          "pct": 40.0,
+          "estimate": 26242,
+          "error": 59.15
+        },
+        {
+          "items": 28899,
+          "pct": 45.0,
+          "estimate": 30304,
+          "error": 52.82
+        },
+        {
+          "items": 32110,
+          "pct": 50.0,
+          "estimate": 34429,
+          "error": 46.4
+        },
+        {
+          "items": 35321,
+          "pct": 55.0,
+          "estimate": 37445,
+          "error": 41.71
+        },
+        {
+          "items": 38532,
+          "pct": 60.0,
+          "estimate": 40843,
+          "error": 36.42
+        },
+        {
+          "items": 41743,
+          "pct": 65.0,
+          "estimate": 44181,
+          "error": 31.22
+        },
+        {
+          "items": 44954,
+          "pct": 70.0,
+          "estimate": 46608,
+          "error": 27.44
+        },
+        {
+          "items": 48165,
+          "pct": 75.0,
+          "estimate": 49254,
+          "error": 23.32
+        },
+        {
+          "items": 51376,
+          "pct": 80.0,
+          "estimate": 51411,
+          "error": 19.97
+        },
+        {
+          "items": 54587,
+          "pct": 85.0,
+          "estimate": 53573,
+          "error": 16.6
+        },
+        {
+          "items": 57798,
+          "pct": 90.0,
+          "estimate": 56677,
+          "error": 11.77
+        },
+        {
+          "items": 61009,
+          "pct": 95.0,
+          "estimate": 59328,
+          "error": 7.64
+        },
+        {
+          "items": 64220,
+          "pct": 100.0,
+          "estimate": 63025,
+          "error": 1.89
+        },
+        {
+          "items": 64237,
+          "pct": 100.0,
+          "estimate": 63025,
+          "error": 1.89
+        }
+      ],
+      "sketch_parameter_k": 512
+    },
+    {
+      "dataset": "Common Crawl",
+      "ordering": "random",
+      "items_total": 64237,
+      "unique_true": 64237,
+      "unique_pct": 100.0,
+      "time_to_5pct_error": 64220,
+      "final_error": 1.89,
+      "convergence": [
+        {
+          "items": 3211,
+          "pct": 5.0,
+          "estimate": 3545,
+          "error": 94.48
+        },
+        {
+          "items": 6422,
+          "pct": 10.0,
+          "estimate": 7089,
+          "error": 88.96
+        },
+        {
+          "items": 9633,
+          "pct": 15.0,
+          "estimate": 9663,
+          "error": 84.96
+        },
+        {
+          "items": 12844,
+          "pct": 20.0,
+          "estimate": 13028,
+          "error": 79.72
+        },
+        {
+          "items": 16055,
+          "pct": 25.0,
+          "estimate": 16084,
+          "error": 74.96
+        },
+        {
+          "items": 19266,
+          "pct": 30.0,
+          "estimate": 18549,
+          "error": 71.12
+        },
+        {
+          "items": 22477,
+          "pct": 35.0,
+          "estimate": 21403,
+          "error": 66.68
+        },
+        {
+          "items": 25688,
+          "pct": 40.0,
+          "estimate": 24554,
+          "error": 61.78
+        },
+        {
+          "items": 28899,
+          "pct": 45.0,
+          "estimate": 29067,
+          "error": 54.75
+        },
+        {
+          "items": 32110,
+          "pct": 50.0,
+          "estimate": 31884,
+          "error": 50.37
+        },
+        {
+          "items": 35321,
+          "pct": 55.0,
+          "estimate": 34923,
+          "error": 45.63
+        },
+        {
+          "items": 38532,
+          "pct": 60.0,
+          "estimate": 38712,
+          "error": 39.74
+        },
+        {
+          "items": 41743,
+          "pct": 65.0,
+          "estimate": 42220,
+          "error": 34.27
+        },
+        {
+          "items": 44954,
+          "pct": 70.0,
+          "estimate": 44293,
+          "error": 31.05
+        },
+        {
+          "items": 48165,
+          "pct": 75.0,
+          "estimate": 47772,
+          "error": 25.63
+        },
+        {
+          "items": 51376,
+          "pct": 80.0,
+          "estimate": 50132,
+          "error": 21.96
+        },
+        {
+          "items": 54587,
+          "pct": 85.0,
+          "estimate": 53573,
+          "error": 16.6
+        },
+        {
+          "items": 57798,
+          "pct": 90.0,
+          "estimate": 57109,
+          "error": 11.1
+        },
+        {
+          "items": 61009,
+          "pct": 95.0,
+          "estimate": 60178,
+          "error": 6.32
+        },
+        {
+          "items": 64220,
+          "pct": 100.0,
+          "estimate": 63025,
+          "error": 1.89
+        },
+        {
+          "items": 64237,
+          "pct": 100.0,
+          "estimate": 63025,
+          "error": 1.89
+        }
+      ],
+      "sketch_parameter_k": 512
+    },
+    {
+      "dataset": "Common Crawl",
+      "ordering": "chrono",
+      "items_total": 64237,
+      "unique_true": 64237,
+      "unique_pct": 100.0,
+      "time_to_5pct_error": 64220,
+      "final_error": 1.89,
+      "convergence": [
+        {
+          "items": 3211,
+          "pct": 5.0,
+          "estimate": 3043,
+          "error": 95.26
+        },
+        {
+          "items": 6422,
+          "pct": 10.0,
+          "estimate": 6061,
+          "error": 90.56
+        },
+        {
+          "items": 9633,
+          "pct": 15.0,
+          "estimate": 8741,
+          "error": 86.39
+        },
+        {
+          "items": 12844,
+          "pct": 20.0,
+          "estimate": 11488,
+          "error": 82.12
+        },
+        {
+          "items": 16055,
+          "pct": 25.0,
+          "estimate": 15517,
+          "error": 75.84
+        },
+        {
+          "items": 19266,
+          "pct": 30.0,
+          "estimate": 18423,
+          "error": 71.32
+        },
+        {
+          "items": 22477,
+          "pct": 35.0,
+          "estimate": 21518,
+          "error": 66.5
+        },
+        {
+          "items": 25688,
+          "pct": 40.0,
+          "estimate": 24349,
+          "error": 62.09
+        },
+        {
+          "items": 28899,
+          "pct": 45.0,
+          "estimate": 28216,
+          "error": 56.07
+        },
+        {
+          "items": 32110,
+          "pct": 50.0,
+          "estimate": 31244,
+          "error": 51.36
+        },
+        {
+          "items": 35321,
+          "pct": 55.0,
+          "estimate": 34135,
+          "error": 46.86
+        },
+        {
+          "items": 38532,
+          "pct": 60.0,
+          "estimate": 37184,
+          "error": 42.11
+        },
+        {
+          "items": 41743,
+          "pct": 65.0,
+          "estimate": 40149,
+          "error": 37.5
+        },
+        {
+          "items": 44954,
+          "pct": 70.0,
+          "estimate": 43918,
+          "error": 31.63
+        },
+        {
+          "items": 48165,
+          "pct": 75.0,
+          "estimate": 49254,
+          "error": 23.32
+        },
+        {
+          "items": 51376,
+          "pct": 80.0,
+          "estimate": 52762,
+          "error": 17.86
+        },
+        {
+          "items": 54587,
+          "pct": 85.0,
+          "estimate": 55268,
+          "error": 13.96
+        },
+        {
+          "items": 57798,
+          "pct": 90.0,
+          "estimate": 57165,
+          "error": 11.01
+        },
+        {
+          "items": 61009,
+          "pct": 95.0,
+          "estimate": 59606,
+          "error": 7.21
+        },
+        {
+          "items": 64220,
+          "pct": 100.0,
+          "estimate": 63025,
+          "error": 1.89
+        },
+        {
+          "items": 64237,
+          "pct": 100.0,
+          "estimate": 63025,
+          "error": 1.89
+        }
+      ],
+      "sketch_parameter_k": 512
+    },
+    {
+      "dataset": "Enron",
+      "ordering": "grouped",
+      "items_total": 100000,
+      "unique_true": 2995,
+      "unique_pct": 3.0,
+      "time_to_5pct_error": 5000,
+      "final_error": 1499.4,
+      "convergence": [
+        {
+          "items": 5000,
+          "pct": 5.0,
+          "estimate": 3127,
+          "error": 4.39
+        },
+        {
+          "items": 10000,
+          "pct": 10.0,
+          "estimate": 4713,
+          "error": 57.36
+        },
+        {
+          "items": 15000,
+          "pct": 15.0,
+          "estimate": 4713,
+          "error": 57.36
+        },
+        {
+          "items": 20000,
+          "pct": 20.0,
+          "estimate": 5707,
+          "error": 90.55
+        },
+        {
+          "items": 25000,
+          "pct": 25.0,
+          "estimate": 7435,
+          "error": 148.23
+        },
+        {
+          "items": 30000,
+          "pct": 30.0,
+          "estimate": 17762,
+          "error": 493.05
+        },
+        {
+          "items": 35000,
+          "pct": 35.0,
+          "estimate": 17762,
+          "error": 493.05
+        },
+        {
+          "items": 40000,
+          "pct": 40.0,
+          "estimate": 17762,
+          "error": 493.05
+        },
+        {
+          "items": 45000,
+          "pct": 45.0,
+          "estimate": 17762,
+          "error": 493.05
+        },
+        {
+          "items": 50000,
+          "pct": 50.0,
+          "estimate": 17762,
+          "error": 493.05
+        },
+        {
+          "items": 55000,
+          "pct": 55.0,
+          "estimate": 17762,
+          "error": 493.05
+        },
+        {
+          "items": 60000,
+          "pct": 60.0,
+          "estimate": 17762,
+          "error": 493.05
+        },
+        {
+          "items": 65000,
+          "pct": 65.0,
+          "estimate": 17762,
+          "error": 493.05
+        },
+        {
+          "items": 70000,
+          "pct": 70.0,
+          "estimate": 17762,
+          "error": 493.05
+        },
+        {
+          "items": 75000,
+          "pct": 75.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 80000,
+          "pct": 80.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 85000,
+          "pct": 85.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 90000,
+          "pct": 90.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 95000,
+          "pct": 95.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 100000,
+          "pct": 100.0,
+          "estimate": 47902,
+          "error": 1499.4
+        }
+      ],
+      "sketch_parameter_k": 512
+    },
+    {
+      "dataset": "Enron",
+      "ordering": "random",
+      "items_total": 100000,
+      "unique_true": 2995,
+      "unique_pct": 3.0,
+      "time_to_5pct_error": 100000,
+      "final_error": 1499.4,
+      "convergence": [
+        {
+          "items": 5000,
+          "pct": 5.0,
+          "estimate": 4917,
+          "error": 64.19
+        },
+        {
+          "items": 10000,
+          "pct": 10.0,
+          "estimate": 17762,
+          "error": 493.05
+        },
+        {
+          "items": 15000,
+          "pct": 15.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 20000,
+          "pct": 20.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 25000,
+          "pct": 25.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 30000,
+          "pct": 30.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 35000,
+          "pct": 35.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 40000,
+          "pct": 40.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 45000,
+          "pct": 45.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 50000,
+          "pct": 50.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 55000,
+          "pct": 55.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 60000,
+          "pct": 60.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 65000,
+          "pct": 65.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 70000,
+          "pct": 70.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 75000,
+          "pct": 75.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 80000,
+          "pct": 80.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 85000,
+          "pct": 85.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 90000,
+          "pct": 90.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 95000,
+          "pct": 95.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 100000,
+          "pct": 100.0,
+          "estimate": 47902,
+          "error": 1499.4
+        }
+      ],
+      "sketch_parameter_k": 512
+    },
+    {
+      "dataset": "Enron",
+      "ordering": "chrono",
+      "items_total": 100000,
+      "unique_true": 2995,
+      "unique_pct": 3.0,
+      "time_to_5pct_error": 100000,
+      "final_error": 1499.4,
+      "convergence": [
+        {
+          "items": 5000,
+          "pct": 5.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 10000,
+          "pct": 10.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 15000,
+          "pct": 15.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 20000,
+          "pct": 20.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 25000,
+          "pct": 25.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 30000,
+          "pct": 30.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 35000,
+          "pct": 35.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 40000,
+          "pct": 40.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 45000,
+          "pct": 45.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 50000,
+          "pct": 50.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 55000,
+          "pct": 55.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 60000,
+          "pct": 60.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 65000,
+          "pct": 65.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 70000,
+          "pct": 70.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 75000,
+          "pct": 75.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 80000,
+          "pct": 80.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 85000,
+          "pct": 85.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 90000,
+          "pct": 90.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 95000,
+          "pct": 95.0,
+          "estimate": 47902,
+          "error": 1499.4
+        },
+        {
+          "items": 100000,
+          "pct": 100.0,
+          "estimate": 47902,
+          "error": 1499.4
+        }
+      ],
+      "sketch_parameter_k": 512
+    }
+  ],
+  "sensitivity_summary": [
+    {
+      "dataset": "Wikipedia",
+      "unique": 90867,
+      "dup_pct": 9.133,
+      "sensitivity": 1.059
+    },
+    {
+      "dataset": "GitHub",
+      "unique": 25593,
+      "dup_pct": 74.407,
+      "sensitivity": 0.667
+    },
+    {
+      "dataset": "Common Crawl",
+      "unique": 64237,
+      "dup_pct": 0.0,
+      "sensitivity": 1.0
+    },
+    {
+      "dataset": "Enron",
+      "unique": 2995,
+      "dup_pct": 97.005,
+      "sensitivity": 0.05
+    }
+  ]
+}
